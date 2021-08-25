@@ -2,21 +2,72 @@
 <html>
     <title>Amazon Books: Your one-stop book shop</title>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src = "login.js"></script>
     </head>
     <body>
     
     <div class="header">
         <img src = "logo.png" style="margin-top: 20px; margin-left: 15px;" class = "logo" width="6%" height = "6%">
+        <script src = "login.js"></script>
+        <a href = "#" onClick = "getLocation()" method = "GET" style = "position: absolute; margin-left: 15px; margin-top: 15px;">Location</a>
         <div class="header-right">
         <a href = "login.html" id = "signin">Sign-In</a>
-        <a href="#">Returns and Orders</a>
+        <a href="https://www.amazon.in/gp/css/order-history">Returns and Orders</a>
         </div>
     </div>
+    <strong><p id = "location" style = "position: center"></p></strong>
+    <script src = "location.js"></script>
     <br><br>
     <center><img src = "image.jpg"></center>
+    <center><strong><p id = "welcome" style = "font-size: 24px">Welcome, user!</p></strong></center>
     <br>
-</body>
-</html>
+    <center><p style = "font-size:20px">Welcome to Amazon Books, the website to buy-and-sell books at a price which everyone's happy with!</p></center>
+    <center><iframe width="840" height="472.5" src="https://www.youtube.com/embed/DLBxC8uGPu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    <center><p>We provide audiobooks in our website, if you would like to check them out, here's a sample of the book <i>The Fault In Our Stars by John Green.</i></p></center>
+    <center><audio controls>
+        <source src="TFIOS-Chapter1.mp3" type="audio/mpeg" preload="auto">
+        Your browser does not support the audio element.
+      </audio></center>
+    <center><p>We sometimes provide video options with the same audio file, as shown below.</p></center>
+    <center><video width="840" height="472.5" controls>
+        <source src="TFIOS-Chapter1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </center>
+
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Get to Know Us</h3>
+                        <ul>
+                            <li><a href="https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer">About Us</a></li>
+                            <li><a href="https://amazon.jobs/en-gb/">Careers</a></li>
+                            <li><a href="https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer">Press Releases</a></li>
+                            <li><a href="https://www.amazon.in/gp/browse.html?node=8872558031&ref_=footer_cares">Amazon Cares</a></li>
+                            <li><a href="https://www.amazon.in/gp/browse.html?node=4594605031&ref_=footer_smile">Gift a Smile</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Connect with Us</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/AmazonIN">Facebook</a></li>
+                            <li><a href="https://twitter.com/AmazonIN">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/amazondotin/">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-copyright text-center py-3">Amazon.Inc © 2021</div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
