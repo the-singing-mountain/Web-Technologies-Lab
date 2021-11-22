@@ -47,7 +47,7 @@
 
     //1. Inserting into stuinfo table
 
-    $insert = "INSERT INTO `stuinfo` VALUES ('1','Karthik',22,'male','MCS','Palace Guttahalli Bangalore'),('2','Ravi',22,'male','MCA','Lalbagh Bangalore'),('3','Adbul',22,'male','MDS','Adugodi Bangalore')";
+    $insert = "INSERT INTO `stuinfo` VALUES ('1','Karthik',22,'male','MCS','Palace Guttahalli Bangalore'),('2','Ravi',22,'male','MCA','Lalbagh Bangalore'),('3','Adbul',22,'male','MCA','Adugodi Bangalore')";
     if($conn->query($insert) == TRUE)
     {
         echo "Values have been inserted!<br><br>";
@@ -95,8 +95,6 @@
 
     //4. Display the records where course = MCA
 
-    echo "Students whose course is MCA is given below:<br><br>";
-
     $display = "SELECT `stuid`, `stuname` FROM `stuinfo` WHERE `course` = 'MCA'";
 
     $result = $conn->query($display);
@@ -112,6 +110,8 @@
     while($row = $result->fetch_assoc()){
         array_unshift($names,$row);
     }
+
+    echo "Students whose course is MCA is given below:<br><br>";
     
     foreach($names as $name)
     {

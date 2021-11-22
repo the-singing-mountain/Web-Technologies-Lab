@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT chess_pieces (heading, piece+)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT piece (name, value, description)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

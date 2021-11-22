@@ -1,0 +1,23 @@
+chess_pieces {
+	color: white;
+	background-color : darkgreen;
+	width: 100%;
+}
+heading {
+	color: green;
+	font-size : 40px;
+	background-color : powderblue;
+    text-align: center;
+    display: block;
+}
+name {
+    color: white;
+    background-color: blue;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+heading, value, description {
+	display: block;
+    text-align: center;
+}

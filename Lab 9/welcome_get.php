@@ -1,5 +1,5 @@
 <html>
-    <head>
+<head>
         <title>Christ (Deemed to be University) Portal</title>
         <style>
             body{
@@ -111,50 +111,32 @@
         <center>
             <h1>Christ (Deemed to be University) Online Test</h1><br>
             <h1>Class: 3MCS</h1>
-        <form action="welcome_get.php" method="get">
-            <input type = "hidden" id="stud-id" name="stud-id" value = "2047116">
-            <table>
-                <tr>
-                    <th>Question</th>
-                    <th>Response</th>
-                <tr>
-                    <td>Name</td>
-                    <td><input type="text" name="name"></td>
-                <tr>
-                <tr>
-                    <td>E-mail</td>
-                    <td><input type="text" name="email"></td>
-                <tr>
-                <tr>
-                    <td>Gender</td>
-                    <td><input type = "radio" id="gender" name="gender" value="male">
-                        <label for="gender">Male</label>
-                        <input type = "radio" id="gender" name="gender" value="female">
-                        <label for="gender">Female</label><br>
-                    </td>
-                <tr>
-                <tr>
-                    <td>Expansion of PHP</td>
-                    <td><textarea id="phpexpansion" name = "phpexpansion" rows = "3" cols = "50"></textarea></td>
-                </tr>
-                <tr>
-                    <td>What is PHP?</td>
-                    <td><textarea id="phpmeaning" name = "phpmeaning" rows = "4" cols = "50"></textarea></td>
-                <tr>
-                <tr>
-                    <td>Which of these does PHP support?</td>
-                    <td>
-                        <input type="checkbox" id="php1" name="php1" value="HTML">
-                        <label for="php1"> HTML </label>
-                        <input type="checkbox" id="php2" name="php2" value="NoSQL">
-                        <label for="php2"> NoSQL </label>
-                        <input type="checkbox" id="php3" name="php3" value="JavaScript">
-                        <label for="php3"> JavaScript </label>
-                    </td>
-                </tr>
-            </table><br>
-            <input type="submit">
-        </form>
+            <?php error_reporting(E_ERROR | E_PARSE);?>
+            <h2>
+            <center>
+            Welcome <?php if(isset($_GET["name"])) { $name = $_GET["name"]; echo $name;} ?><br>
+            Your Student ID is: <?php $student_id = $_GET["stud-id"]; echo $student_id;?><br>
+            Your email address is: <?php $email = $_GET["email"]; echo $email; ?><br>
+            Gender: <?php if(isset($_GET["gender"])){ $gender = $_GET["gender"]; echo $gender;}?><br>
+            Expansion of PHP: <?php if(isset($_GET["phpexpansion"])) $phpexpansion = $_GET["phpexpansion"]; echo $phpexpansion."<br>"?><br>
+            What is PHP? <?php if(isset($_GET["phpmeaning"])) $phpmeaning = $_GET["phpmeaning"]; echo $phpmeaning."<br>"?><br>
+            Which of these does PHP support?<br>
+            <?php 
+            if(isset($_GET["php1"])) { $php1 = $_GET["php1"]; echo "1.".$php1."<br>";}
+            if(isset($_GET["php2"])) { $php2 = $_GET["php2"]; echo "2.".$php2."<br>";}
+            if(isset($_GET["php3"])) { $php3 = $_GET["php3"]; echo "3.".$php3."<br>";}
+            ?>
+            </h2>
+            <h3>
+                <?php
+                $file = fopen("test_inputs.txt","w+") or die("unable to open file");
+                $content = $name."\n".$student_id."\n".$email."\n".$gender."\n".$phpexpansion."\n".$phpmeaning."\n".$php1."\n".$php2."\n".$php3;
+                if(fwrite($file,$content)){
+                    echo "Form has been saved in test_inputs.txt\nThank you for submitting!";
+                }
+                fclose($file);
+                ?>
+            </h3>
         </center>
-    </body>
+</body>
 </html>

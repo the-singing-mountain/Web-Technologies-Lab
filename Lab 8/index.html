@@ -1,0 +1,35 @@
+<html>  
+<head>  
+<title> Login Form</title>  
+</head>  
+<body>
+    <link rel="stylesheet" href="style2.css">
+
+    <div class="header">
+        <img src = "logo.png" style="margin-top: 20px; margin-left: 15px;" class = "logo" width="6%" height = "6%">
+        <script src = "login.js"></script>
+        <div class="header-right">
+        <a href = "login.html" id = "signin">Sign-In</a>
+        <a href="https://www.amazon.in/gp/css/order-history">Returns and Orders</a>
+        </div>
+    </div>
+
+    <h3> LOGIN </h3>  
+    <form name ="Login_form" onsubmit="submit_form()">  
+    <h4> USERNAME</h4>  
+    <input type="text" placeholder="Enter your email id"/>  
+    <h4> PASSWORD</h4>  
+    <input type="password" placeholder="Enter your password"/></br></br>  
+    <input type="submit" value="Login"/>
+</form>  
+<script type="text/javascript">  
+    function submit_form()
+    {  
+        alert("Login successfully");  
+    }  
+    function create()
+    {  
+    window.location="signup.html";
+    }  
+    </script>
+</html>  
