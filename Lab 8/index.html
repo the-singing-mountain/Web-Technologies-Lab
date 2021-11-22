@@ -1,35 +1,74 @@
 <html>  
 <head>  
-<title> Login Form</title>  
+<title>Chess.com</title>  
 </head>  
 <body>
     <link rel="stylesheet" href="style2.css">
 
     <div class="header">
-        <img src = "logo.png" style="margin-top: 20px; margin-left: 15px;" class = "logo" width="6%" height = "6%">
+        <img src = "logo.png" style="margin-top: 20px; margin-left: 15px;" class = "logo" width="10%" height = "10%">
         <script src = "login.js"></script>
         <div class="header-right">
-        <a href = "login.html" id = "signin">Sign-In</a>
-        <a href="https://www.amazon.in/gp/css/order-history">Returns and Orders</a>
+        <a href = "index.html" id = "home">Home</a>
         </div>
     </div>
 
-    <h3> LOGIN </h3>  
-    <form name ="Login_form" onsubmit="submit_form()">  
-    <h4> USERNAME</h4>  
-    <input type="text" placeholder="Enter your email id"/>  
-    <h4> PASSWORD</h4>  
-    <input type="password" placeholder="Enter your password"/></br></br>  
-    <input type="submit" value="Login"/>
-</form>  
-<script type="text/javascript">  
-    function submit_form()
-    {  
-        alert("Login successfully");  
-    }  
-    function create()
-    {  
-    window.location="signup.html";
-    }  
+    <center>
+        <h1>Chess.com Customer Support Form</h1>
+        <form name ="Login_form" onsubmit="submit_form()">  
+            <h4>EMAIL ADDRESS</h4>  
+            <input type="email" id = "emailadd" name = "emailadd" placeholder="Enter your email id"/>  
+            <h4>PASSWORD</h4>
+            <input type="password" id = "pwd" name = "pwd" placeholder="Enter your password"/></br></br>  
+            <h4>Which clients are you using currently?</h4>
+            <input type="checkbox" id="client1" name="client1" value="Android">
+            <label for="client1"> Android </label><br>
+            <input type="checkbox" id="client2" name="client2" value="iOS">
+            <label for="client2"> iOS</label><br>
+            <input type="checkbox" id="client3" name="client3" value="Web">
+            <label for="client3"> Web</label><br>
+            <h4>What is the issue that you are facing?</h4>
+            <textarea id="issue" name="issue" rows="4" cols="50"></textarea><br>
+            <h4>Date and Time of Encountering the Issue</h4>
+            <input type="datetime-local" id="datetimeissue" name="datetimeissue">
+            <h4>On a scale of 1-5, how much would you rate our website/app?</h4>
+            <input type ="radio" id="recommend" name="recommend" value="1">
+            <label for="recommend">1</label>
+            <input type ="radio" id="recommend" name="recommend" value="2">
+            <label for="recommend">2</label>
+            <input type ="radio" id="recommend" name="recommend" value="3">
+            <label for="recommend">3</label>
+            <input type ="radio" id="recommend" name="recommend" value="4">
+            <label for="recommend">4</label>
+            <input type ="radio" id="recommend" name="recommend" value="5">
+            <label for="recommend">5</label><br>
+            <input type="submit" value="Submit"/>
+        </form>  
+    </center>
+    <script type="text/javascript">  
+        function submit_form()
+        {  
+            var email = document.getElementById("emailadd").value;
+            var pwd = document.getElementById("pwd").value;
+            var recommend = document.getElementById("recommend").value;
+            var client1 = document.getElementById("client1").value;
+            var client2 = document.getElementById("client2").value;
+            var client3 = document.getElementById("client3").value;
+            var datetime = document.getElementById("datetimeissue").value;
+            var issue = document.getElementById("issue").value;
+            var re = /\S+@\S+\.\S+/;
+            if(email == "")
+            alert("E-mail cannot be empty");
+            else if(pwd == "")
+            alert("Password field cannot be empty");
+            else if(client1=="" && client2=="" && client3 == "")
+            alert("Please select client");
+            else if(recommend=="")
+            alert("Please select 1-5 rating");
+            else if(issue=="")
+            alert("Please write the issue that you are facing");
+            else
+            alert("Thank you! Your response has been submitted");
+        }  
     </script>
 </html>  
