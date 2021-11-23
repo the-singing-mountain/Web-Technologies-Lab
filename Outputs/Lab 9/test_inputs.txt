@@ -1,0 +1,9 @@
+Karthik
+2047116
+karthikcm5329@gmail.com
+male
+Hypertext Pre-processor
+PHP is a scripting language that executes codes on a server.
+HTML
+
+JavaScript
