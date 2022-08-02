@@ -9,7 +9,7 @@ Lab 3: https://the-singing-mountain.github.io/Lab%203/Lab%203.html
 
 Lab 4: https://the-singing-mountain.github.io/Lab%204/home.html
 
-Lab 5: https://the-singing-mountain.github.io/Lab%205/home.xml
+Lab 5: https://the-singing-mountain.github.io/Lab%205/home.html
 
 Lab 6: https://the-singing-mountain.github.io/Lab%206/lab6.xml
 
